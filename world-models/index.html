@@ -1,0 +1,946 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>World models - jiachengdai</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#links" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="jiachengdai" class="md-header__button md-logo" aria-label="jiachengdai" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            jiachengdai
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              World models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="jiachengdai" class="md-nav__button md-logo" aria-label="jiachengdai" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    jiachengdai
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Paper Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Paper Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World-Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Others
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Others
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../一些在使用过程中逐步完善的插件内容" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-of-world-models-arxivorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes of World Models (arxiv.org)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes of World Models (arxiv.org)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02agent-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.Agent model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="02.Agent model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v-vae-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      V----VAE model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m-mdn-rnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      M----MDN-RNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-controller-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      C----Controller Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vcm-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      V&amp;C&amp;M together
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.赛车实验
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="03.赛车实验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1实验步骤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 结果
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04vizdoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      04.VizDoom实验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.迭代训练
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      附录----一些内容的实现细节
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.数据稀缺问题---场景生成、在模拟环境中训练
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.规划与控制
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Works
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Related Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01bev" class="md-nav__link">
+    <span class="md-ellipsis">
+      01.BEV预测（百度）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02sem2" class="md-nav__link">
+    <span class="md-ellipsis">
+      02.SEM2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03wayvemile" class="md-nav__link">
+    <span class="md-ellipsis">
+      03.Wayve公司的研究工作MILE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04gaia" class="md-nav__link">
+    <span class="md-ellipsis">
+      04.GAIA 场景生成预测
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#05drivedreamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      05.DriveDreamer （清华）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#06drive-wm" class="md-nav__link">
+    <span class="md-ellipsis">
+      06.Drive-WM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#07trafficbots" class="md-nav__link">
+    <span class="md-ellipsis">
+      07.TrafficBots
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#08think2drive" class="md-nav__link">
+    <span class="md-ellipsis">
+      08.Think2Drive(上交)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#09occworld" class="md-nav__link">
+    <span class="md-ellipsis">
+      09.OccWorld(清华)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>World models</h1>
+
+<h3 id="links">Links</h3>
+<p>论文：<a href="https://arxiv.org/pdf/1803.10122">World Models (arxiv.org)</a></p>
+<p><em>好像还有另一个发表版本<a href="https://dl.acm.org/doi/pdf/10.5555/3327144.3327171">Recurrent World Models Facilitate Policy Evolution (acm.org)</a>，但感觉第一个更容易读</em></p>
+<p>github互动论文页：<a href="https://worldmodels.github.io/">World Models</a></p>
+<p>代码实现：</p>
+<p>​   Pytorch版本： <a href="https://github.com/ctallec/world-models">ctallec/world-models: Reimplementation of World-Models (Ha and Schmidhuber 2018) in pytorch (github.com)</a></p>
+<p>​   Tensorflow版本: <a href="https://github.com/zacwellmer/WorldModels">zacwellmer/WorldModels: World Models with TensorFlow 2 (github.com)</a></p>
+<p>Video:<a href="https://www.youtube.com/watch?v=IZPKohYNri4">World Models Explained (youtube.com)</a></p>
+<p>一篇综述文章： <a href="https://arxiv.org/pdf/2403.02622">arxiv.org/pdf/2403.02622</a></p>
+<h3 id="notes-of-world-models-arxivorg">Notes of  <a href="https://arxiv.org/pdf/1803.10122">World Models (arxiv.org)</a></h3>
+<h4 id="01introduction">01.Introduction</h4>
+<p>由大脑内部根据过去信息和当前时刻状态对于未来预测并能迅速做出反应引出类比</p>
+<p>​   大脑学习生活中信息的空间和时间方面的抽象表示</p>
+<p>​   任何特定时刻的感知  都受到大脑基于内部模型对于未来的预测  的支配</p>
+<p>​   根据当前运动动作预测未来的感官数据      本能的根据预测模型采取行动</p>
+<p>​   例子：打棒球，根据来球预测未来并迅速挥棒打出快球</p>
+<p>传统RL难以学习大模型数百万权重[信用分配问题]，较小网络能在训练更快迭代到一个好的策略</p>
+<p>将智能体分为大型世界模型和小型控制器模型，训练大型NN来处理RL任务</p>
+<p>训练大型NN 无监督学习智能体的世界的模型   而训练较小控制器模型[专注于小搜索空间的信用分配问题]学习使用世界模型执行任务</p>
+<p>PS: 还探索了将实际的环境完全替换为生成的环境</p>
+<h4 id="02agent-model">02.Agent model</h4>
+<p>Agent(有视觉感知)----&gt;看到内容压缩为编码----&gt;根据历史信息预测未来状态----&gt;根据V和M作出行动决策</p>
+<p>​                                                    V                                            M                                                    C</p>
+<blockquote>
+<p>视觉（V）       记忆（M）    控制[决策]器 （C）</p>
+</blockquote>
+<p><img src="https://www.helloimg.com/i/2024/09/29/66f92f5592545.png" alt="屏幕截图 2024-09-29 185044.png" style="zoom:50%;" /></p>
+<h5 id="v-vae-model">V----VAE model</h5>
+<p>作用：学习每个观察到的输入帧的抽象压缩表示，进行encode</p>
+<blockquote>
+<p>变分自编码器：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/64485020">一文理解变分自编码器（VAE） - 知乎 (zhihu.com)</a></p>
+<p>输入高维数据----&gt;编码产生概率分布-----&gt;<mark>隐向量z</mark>------&gt;解码使用概率分布的采样<img alt="img" src="https://picx.zhimg.com/80/v2-df06f2d1471615dae76b1e09488091b5_1440w.webp" /></p>
+</blockquote>
+<h5 id="m-mdn-rnn">M----MDN-RNN</h5>
+<p>作用：预测未来</p>
+<p><mark>因为许多复杂的环境本质上是随机的，所以训练 RNN 输出概率密度函数<span class="arithmatex">\(p(z)\)</span>而不是z</mark></p>
+<p><img alt="img" src="https://worldmodels.github.io/assets/mdn_rnn_new.svg" /></p>
+<p>对<span class="arithmatex">\(P(z_{t+1}|z_{t},a_{t},h_{t})\)</span>建模：<span class="arithmatex">\(a_{t}\)</span>为时刻t采取的动作，<span class="arithmatex">\(h_{t}\)</span>是RNN的隐藏状态（包含了过去的信息）</p>
+<p>​                                           <span class="arithmatex">\(τ\)</span>是<em>temperature</em>参数（控制预测z时候的采样分布，τ越高对未来预测越随机化）</p>
+<h5 id="c-controller-model">C----Controller Model</h5>
+<p>作用：确定要采取的操作action，以便在环境推出期间最大化智能体预期获得奖励</p>
+<p>特点：C尽可能简单和小,为了使得大部分复杂性和模型参数位于V和M中</p>
+<p>使用了单层线性模型将<span class="arithmatex">\(z_{t}\)</span>、<span class="arithmatex">\(h_{t}\)</span>映射到<span class="arithmatex">\(a_{t}\)</span></p>
+<div class="arithmatex">\[a_{t}=W_{c}[z_{t},h_{t}]+b_{c}\]</div>
+<p>C参数优化策略:CMA-ES</p>
+<h5 id="vcm-together">V&amp;C&amp;M together</h5>
+<p><img alt="img" src="https://worldmodels.github.io/assets/world_model_schematic.svg" /></p>
+<h4 id="03">03.赛车实验</h4>
+<h5 id="31">3.1实验步骤</h5>
+<p>Step1. 收集10000个随机环境的数据集</p>
+<p>Step2. 训练VAE把帧编码为z向量</p>
+<p>Step3. 训练MDN-RNN以对<span class="arithmatex">\(P(z_{t+1}|a_{t},z_{t},h_{t})\)</span>进行训练</p>
+<p>Step4. 定义控制器C   <span class="arithmatex">\(<span class="arithmatex">\(a_{t}=W_{c}[z_{t},h_{t}]+b_{c}\)</span>\)</span></p>
+<p>Step5. 使用CMA-ES 优化参数w、b使得期望累计奖励最大化</p>
+<h5 id="32">3.2 结果</h5>
+<p>文章分了三种情况，只看V，加了一层hidden，以及完整的模型，效果逐渐变好</p>
+<ul>
+<li>
+<p>只有V\C驾驶     不稳定</p>
+</li>
+<li>
+<p>允许智能体同时访问V、M提高稳定性，有效急转弯</p>
+</li>
+</ul>
+<p>进一步的想法：<mark>生成赛程场景</mark>    &amp;&amp;     <mark>在幻想（预测的内容）中训练</mark></p>
+<h4 id="04vizdoom">04.VizDoom实验</h4>
+<p>躲避特工的小游戏实验</p>
+<p><img src="https://www.helloimg.com/i/2024/09/29/66f92fc7b9056.png" alt="image-20240927110231233.png" style="zoom: 67%;" /></p>
+<p>实验中发现了一个问题，智能体会==“欺骗”模型==，发现对抗策略----&gt;解决方案是提升<span class="arithmatex">\(τ\)</span>，但要适度提升，否则效果变差</p>
+<h4 id="05">05.迭代训练</h4>
+<p>只有智能体学会如何有策略的在世界中导航才能获得世界的一部分</p>
+<p>上面的实验比较简单，但更复杂的任务需要迭代训练过程，防止random参数学习到的内容不够好（有缺失）</p>
+<p>迭代训练类似“大脑重放最近的经历”</p>
+<h4 id="-">附录----一些内容的实现细节</h4>
+<p>1.变分自编码器VAE</p>
+<p>2.RNN</p>
+<p>3.控制器</p>
+<p>4.进化策略（CMA-ES）</p>
+<p>5.DoomRNN</p>
+<h3 id="applications">Applications</h3>
+<h4 id="1-">1.数据稀缺问题---场景生成、在模拟环境中训练</h4>
+<p>GAIA    DriveDreamer等</p>
+<blockquote>
+<p>在自动驾驶领域，世界模型的引入标志着向数据驱动智能的关键转变.</p>
+<p>数据稀缺性问题，特别是在如BEV标注等专业任务中，突显了世界模型等创新解决方案的实际必要性。通过从历史数据中生成预测情景，这些模型不仅规避了数据收集和标注带来的限制，还增强了在模拟环境中训练自动系统的能力，这些环境可以反映甚至超越现实世界条件的复杂性。</p>
+<p>例如：某些驾驶行为由于其==风险性难以获取数据==，驾驶场景生成允许模拟测试</p>
+<p>凭借自动驾驶车辆采集的大量实景视频数据，可以利用生成模型 去生成未来场景来和真实的未来时刻数据对比，从而构建loss，这样就可以不依赖标注信息对模型进行训练</p>
+</blockquote>
+<h4 id="2">2.规划与控制</h4>
+<p>MILE     DriveWM等</p>
+<blockquote>
+<p>在自动驾驶领域，世界模型通过==模拟车辆在各种交通环境中的行为和互动来增强决策和规划能力==。它们能够预测其他车辆、行人和动态环境变化，从而帮助自主系统做出更安全、更高效的驾驶决策。例如，在无人驾驶汽车项目中，世界模型可以预测交通流量、路况变化以及潜在的风险因素，使车辆能够提前做出反应，避免事故和优化行驶路径。</p>
+</blockquote>
+<h3 id="problems">Problems</h3>
+<ul>
+<li><mark>训练数据需求大</mark>，处理数据消耗时间资源高</li>
+<li>模型==可解释性==在医疗、自驾领域有待提高，可能带来潜在风险</li>
+<li>==计算资源需求==高，需要处理高维数据、复杂环境</li>
+<li>还有一些决策责任、==隐私伦理==方面的问题</li>
+</ul>
+<h3 id="related-works">Related Works</h3>
+<p>相关的一些研究也大致是重点分别在数据生成和规划控制决策两个应用分类上，也有部分研究都有涉及</p>
+<h4 id="01bev">01.BEV预测（百度）</h4>
+<p>[<a href="http://export.arxiv.org/abs/2407.05679">2407.05679] BEVWorld: A Multimodal World Model for Autonomous Driving via Unified BEV Latent Space (arxiv.org)</a></p>
+<blockquote>
+<p>主要工作：使用==多模态的数据==（视角图像、雷达）转换到==BEV表达进行预测未来的图像和点云==</p>
+<p>是多模态的世界模型，多模态数据---&gt;BEV---&gt;未来预测</p>
+<p>分为两个主要部分      PART1.多模态tokenizer网络、   Part2.潜在BEV序列扩散网络</p>
+<ul>
+<li>
+<p>tokenizer将原始多模态数据压缩在BEV空间</p>
+</li>
+<li>
+<p>扩散序列用来预测未来帧图像和点云</p>
+</li>
+</ul>
+<p>局限：扩散模型推断过程缓慢且计算成本高，动态对象生成图像模糊</p>
+<p><img alt="92a5b86fc759cbed3e8a503a8dee85a8.png" src="https://i-blog.csdnimg.cn/blog_migrate/4b88d0c9c552d3d3b0c168ee544093cf.png" /></p>
+<p><img alt="a7e881d129dd8e8adf6c40944a3879da.png" src="https://i-blog.csdnimg.cn/blog_migrate/be6991f204f1d51f2ff00cf6b39de90b.png" /></p>
+</blockquote>
+<h4 id="02sem2">02.SEM2</h4>
+<p>[<a href="https://arxiv.org/abs/2210.04017">2210.04017] Enhance Sample Efficiency and Robustness of End-to-end Urban Autonomous Driving via Semantic Masked World Model (arxiv.org)</a></p>
+<blockquote>
+<p>语义掩码世界模型</p>
+<p>针对的问题：潜在状态中包含的无关信息（天气、楼等）导致采样效率低、鲁棒性差，训练数据分布不均</p>
+<p>效果：<mark>提升端到端自动驾驶的采样效率和鲁棒性</mark></p>
+<p>主要特点</p>
+<ul>
+<li>
+<p>decoder加入了语义掩码，使得模型学到  更紧凑 &amp; 与驾驶任务更相关的  特征</p>
+</li>
+<li>
+<p>针对训练数据不均衡：在每个训练batch加入各种场景样本来均衡分布</p>
+</li>
+<li>输入端除了视频序列内容还加入了lidar信息</li>
+</ul>
+<p><img alt="img" src="https://pic1.zhimg.com/80/v2-d524a48a21352b21a8894721532be0b6_1440w.webp" /></p>
+</blockquote>
+<h4 id="03wayvemile">03.Wayve公司的研究工作MILE</h4>
+<p>[<a href="https://arxiv.org/abs/2210.07729">2210.07729] Model-Based Imitation Learning for Urban Driving (arxiv.org)</a>]</p>
+<blockquote>
+<p>MILE中==没有预测reward==        基于==模仿学习==       有==action的输出==</p>
+<p>将世界模型与模仿学习相结合，从离线驾驶数据语料库中联合学习世界模型和驾驶策略，想象多样化和合理的未来，并利用这种能力来想象如何规划其未来的行动。。甚至==在“想象”中驾驶==</p>
+<p>使用“广义推理算法”进行理性和可视化的未来驾驶环境的想象和预测，通过想象来弥补感知信息的缺失</p>
+<p>使未来action的规划成为可能，允许自动驾驶车辆在没有高清地图的情况下操作</p>
+<p>主要结构：</p>
+<ul>
+<li>观测编码：图像特征 提升3D，汇总BEV，提取特征压缩为一维向量</li>
+<li>概率建模：预测的将要发生的情况与实际发生情况分布的匹配训练</li>
+<li>解码器：输出图像、bev的重构以及驾驶策略</li>
+<li>时间建模：循环网络、对潜在动态建模，从前一个潜在状态h预测下一个</li>
+<li>imaging想象：结合过去及观察，想象未来的潜在状态，进行规划和操作，或者也能通过解码器可视化</li>
+</ul>
+<p><img alt="image-20240928235705087.png" src="https://www.helloimg.com/i/2024/09/29/66f930c0c6538.png" /></p>
+</blockquote>
+<h4 id="04gaia">04.GAIA 场景生成预测</h4>
+<p>[<a href="https://arxiv.org/abs/2309.17080">2309.17080] GAIA-1: A Generative World Model for Autonomous Driving (arxiv.org)</a></p>
+<blockquote>
+<p>通过==多模态数据输入==生成==高质量==的驾驶场景，如视频、文字</p>
+<p>特点：自监督学习      多模态数据处理     </p>
+<p>结构：世界模型+视频扩散编码器</p>
+<ul>
+<li>训练encoder 将视频、文字、行为（速度、转向等action）转换为token</li>
+<li>world model训练，对序列产生预测（随机drop一些token适配不同的生成）</li>
+<li>预测decoder，将产生的latent序列解码为视频内容</li>
+</ul>
+<p><img alt="image-20240929081455199.png" src="https://www.helloimg.com/i/2024/09/29/66f930ac7fa42.png" /></p>
+</blockquote>
+<h4 id="05drivedreamer">05.DriveDreamer  （清华）</h4>
+<p>[<a href="https://arxiv.org/pdf/2309.09777">arxiv.org/pdf/2309.09777</a>]</p>
+<blockquote>
+<p>完全==源自真实世界驾驶场景==的world model，在nuscenes上做了训练，输入包括了更多的元素</p>
+<p>连续驾驶视频生成、驾驶场景交互、根据驾驶动作输入预测未来</p>
+<p><mark>侧重驾驶策略生成</mark>，除了场景还能生成未来驾驶动作，<mark>更具有决策性</mark></p>
+<p>两阶段的训练：</p>
+<ol>
+<li>增加视频生成中不可控的表现</li>
+<li>引入actionFormer使用驾驶动作迭代预测未来，减少干扰，提高accuracy</li>
+</ol>
+<p>还有一个 DriveDreamer-v2 （中科院），结合了一个LLM来生成用户定义的驾驶视频</p>
+<p><a href="https://drivedreamer2.github.io/">DriveDreamer-2: LLM-Enhanced World Models for Diverse Driving Video Generation (drivedreamer2.github.io)</a> </p>
+<p>DriveDreamer的结构：</p>
+<p><img alt="Refer to caption" src="https://ar5iv.labs.arxiv.org/html/2309.09777/assets/x3.png" /></p>
+</blockquote>
+<h4 id="06drive-wm">06.Drive-WM</h4>
+<p><a href="https://arxiv.org/pdf/2311.17918">arxiv.org/pdf/2311.17918</a></p>
+<blockquote>
+<p>用于增强==端到端==自动驾驶规划安全性的==多视角==世界模型</p>
+<p>联合多个视图多个帧：</p>
+<p>​ 图像形式化-----&gt;加入时间层-----&gt;多视图编码</p>
+<p>​ 通过多视角和时间建模，共同生成多个视角的帧，然后从相邻视角预测中间视角，提   高多个视角之间的一致性</p>
+<p>利用世界模型为从planner中采样的轨迹候选项生成预测的未来场景，使用基于图像的奖励函数评估未来场景，并选择最优轨迹来扩展规划树</p>
+<p>后面的细节结构内容有点没看太明白，但主要特点是首个实现端到端世界模型潜在应用的，而且融入了多视角。文章称效果很好</p>
+<p><img alt="image-20240929113053958.png" src="https://www.helloimg.com/i/2024/09/29/66f9308a0071c.png" /></p>
+</blockquote>
+<h4 id="07trafficbots">07.TrafficBots</h4>
+<p><a href="https://arxiv.org/pdf/2303.04116">TrafficBots: Towards World Models for Autonomous Driving Simulation and Motion Prediction</a></p>
+<blockquote>
+<p><mark>端到端</mark>    运动预测   <mark>多智能体策略</mark></p>
+<p>强调场景中代理的动作预测</p>
+<p>使用世界模型解决数据驱动的交通模拟问题</p>
+<p>更快的操作速度，可以扩展以容纳更多代理</p>
+<p>采用CVAE编码器学习每个agent的独特个性，促进动作预测从BEV角度进行</p>
+<p>应用：交通模拟、运动预测</p>
+<p>与world model关系 ：</p>
+<blockquote>
+<p>"我们寻求获得一个足够真实的世界模型，以取代现实世界或全栈模拟器来开发 AD 规划算法。"（原文翻译）</p>
+</blockquote>
+</blockquote>
+<h4 id="08think2drive">08.Think2Drive(上交)</h4>
+<p><a href="https://arxiv.org/pdf/2402.16720">2402.16720 (arxiv.org)</a></p>
+<blockquote>
+<p>用于准现实的交通场景 或者作为数据收集模型</p>
+<p>使用世界模型来学习环境的变化，然后用它充当神经模拟器来训练planner</p>
+<p>由于世界模型可以在低维潜在空间思考，模型有较高训练效率</p>
+<p>==直接利用3D占用信息作为系统输入==来预测周围环境的变化并规划自动驾驶车辆的action</p>
+<p>主要的内容：</p>
+<ul>
+<li>
+<p>记录采样---&gt;世界模型编码<span class="arithmatex">\(s_{t}\)</span>---&gt;规划生成<span class="arithmatex">\(a_{t}\)</span>，<span class="arithmatex">\(s_{t}\)</span>和<span class="arithmatex">\(a_{t}\)</span>输入预测奖励<span class="arithmatex">\(r_{t}\)</span>，终止状态<span class="arithmatex">\(c_{t}\)</span>和未来<span class="arithmatex">\(s_{t+1}\)</span></p>
+</li>
+<li>
+<p>使用DreamerV3结构和目标训练世界模型和planner</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="09occworld">09.OccWorld(清华)</h4>
+<p><a href="https://arxiv.org/pdf/2311.16038">arxiv.org/pdf/2311.16038</a></p>
+<blockquote>
+<p>在3D空间学习world model</p>
+<p>“<strong>自动驾驶场景的自回归生成建模框架</strong>”</p>
+<p>基于==3D占有率（occupancy）==（原因：场景描述更精细、获取更经济、可以同时适应视觉和雷达）</p>
+<p>主要内容：</p>
+<ul>
+<li>使用3D占用表示来描述周围环境，将3D空间划分为多个体素，并为每个体素分配占用标签</li>
+<li>通过自监督的方式将3D占用转换为离散的场景标记，以便更好地表示场景</li>
+<li>采用空间-时间生成变换器来预测未来的场景标记和自我运动轨迹，模型能够在多个尺度上进行空间聚合和时间注意力机制的应用</li>
+</ul>
+<p><img alt="img" src="https://pic2.zhimg.com/80/v2-281a942c024eb8f761f0ab0ab26faa47_1440w.webp" /></p>
+</blockquote>
+<p>一个网友推荐的world model做未来场景预测的文章    源自ICLR2024</p>
+<p><img src="https://www.helloimg.com/i/2024/09/29/66f930557bf4c.png" alt="image-20240929143030836.png" style="zoom:50%;" /></p>
+<p>LEARNING UNSUPERVISED WORLD MODELS FOR AUTONOMOUS DRIVING VIA DISCRETE DIFFUSIO</p>
+<p><a href="https://simg.baai.ac.cn/paperfile/d12a0fed-b821-4dbc-835e-8d1a34304f8f.pdf">d12a0fed-b821-4dbc-835e-8d1a34304f8f.pdf (baai.ac.cn)</a></p>
+<blockquote>
+<p>首先使用VQVAElike标记器对传感器观测进行标记，然后通过离散扩散预测未来。该标记器将点云编码为鸟瞰图(BEV)中的离散潜点，并通过可微深度渲染进行重建</p>
+<p>提出将观察标记化、离散扩散和Transformer架构结合起来，作为构建无监督世界模型的新方法，从而为自动驾驶中的点云预测任务获得最先进的结果</p>
+<p><img alt="image-20240929144613765.png" src="https://www.helloimg.com/i/2024/09/29/66f930375818b.png" /></p>
+</blockquote>
+<p>开头的<strong>Links</strong>里面放的那篇综述里面有一个很好的图</p>
+<p>总结了与world models有关的研究</p>
+<p><img alt="related-works" src="https://www.helloimg.com/i/2024/09/29/66f9268db9a78.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
