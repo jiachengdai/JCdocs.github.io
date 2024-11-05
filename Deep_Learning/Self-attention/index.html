@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#self-attention" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -292,6 +297,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Self attention
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -301,6 +317,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#self-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self Attention 自注意力机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Self Attention 自注意力机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-head-self-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-head Self-attention
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-head Self-attention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#self-attention-vs-cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-attention V.S. CNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-rnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      VS RNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -458,6 +539,62 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#self-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self Attention 自注意力机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Self Attention 自注意力机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-head-self-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-head Self-attention
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-head Self-attention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#self-attention-vs-cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-attention V.S. CNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-rnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      VS RNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -473,7 +610,51 @@
 
   <h1>Self attention</h1>
 
-
+<h2 id="self-attention">Self Attention 自注意力机制</h2>
+<p>Input is a set of vectors(may change length)</p>
+<p>eg：句子、声音信号、图</p>
+<p>output：</p>
+<ul>
+<li>每个向量都有一个label：如词性标注</li>
+<li>整个序列只有一个输出：如情感分析、语者辨认</li>
+<li>不知道应该输出多少label。。机器自己决定：seq2seq</li>
+</ul>
+<p>一些方法：</p>
+<ul>
+<li>独热编码：没有语义信息</li>
+<li>词嵌入</li>
+</ul>
+<p>计算两个向量的关联程度</p>
+<ul>
+<li>dot-product</li>
+<li>Additive</li>
+</ul>
+<p>​   <img alt="image-20241105130310268" src="../../assest/image-20241105130310268.png" /></p>
+<p>如何计算bn</p>
+<p><img alt="image-20241105135711126" src="../../assest/image-20241105135711126.png" /></p>
+<p>$$
+Q=W^q·I\
+K=W^K·I\
+V=W^V·I
+$$
+<img alt="image-20241105140954323" src="../../assest/image-20241105140954323.png" /></p>
+<p><img alt="image-20241105135851544" src="../../assest/image-20241105135851544.png" /></p>
+<h3 id="multi-head-self-attention">Multi-head Self-attention</h3>
+<p>多头注意力机制</p>
+<p><img alt="image-20241105142001412" src="../../assest/image-20241105142001412.png" /></p>
+<p><mark>！位置编码</mark></p>
+<p>No position information in self attention</p>
+<p><img alt="😄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f604.svg" title=":smile:" /> Positional Encoding</p>
+<p><img src="../assest/image-20241105142306713.png" alt="image-20241105142306713" style="zoom:33%;" /></p>
+<p>Application:</p>
+<p>Transformer     Bert     语音</p>
+<h4 id="self-attention-vs-cnn">Self-attention V.S. CNN</h4>
+<ul>
+<li>CNN 可看做简化的SA，CNN只考虑感知域内</li>
+</ul>
+<h4 id="vs-rnn">VS RNN</h4>
+<p><img alt="image-20241105144645623" src="../../assest/image-20241105144645623.png" /></p>
+<p>（串行与并行）</p>
 
 
 
