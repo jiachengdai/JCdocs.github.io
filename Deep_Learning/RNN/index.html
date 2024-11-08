@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../../NOTES/world-models/">
+        <link rel="prev" href="../CNN/">
       
+      
+        <link rel="next" href="../Self-attention/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>一些在使用过程中逐步完善的插件内容 - jiachengdai</title>
+        <title>RNN - jiachengdai</title>
       
     
     
@@ -64,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#latex" class="md-skip">
+        <a href="#rnn" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              一些在使用过程中逐步完善的插件内容
+              RNN
             
           </span>
         </div>
@@ -227,17 +229,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -251,7 +255,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Deep Learning
@@ -265,7 +269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Deep_Learning/CNN/" class="md-nav__link">
+      <a href="../CNN/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -283,10 +287,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Deep_Learning/RNN/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    RNN
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -295,6 +317,75 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      RNN
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RNN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      也可以有多层隐藏层
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rnn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      两种RNN：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rnn_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      双向的RNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lstm" class="md-nav__link">
+    <span class="md-ellipsis">
+      长 短期 记忆LSTM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -307,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Deep_Learning/Self-attention/" class="md-nav__link">
+      <a href="../Self-attention/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -328,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Deep_Learning/Transformer/" class="md-nav__link">
+      <a href="../Transformer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -416,19 +507,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -442,7 +531,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             OTHERS
@@ -453,28 +542,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    一些在使用过程中逐步完善的插件内容
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../OTHERS/%E4%B8%80%E4%BA%9B%E5%9C%A8%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%80%90%E6%AD%A5%E5%AE%8C%E5%96%84%E7%9A%84%E6%8F%92%E4%BB%B6%E5%86%85%E5%AE%B9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -483,60 +554,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#latex" class="md-nav__link">
-    <span class="md-ellipsis">
-      latex 公式支持
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      渲染代码
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gitpage" class="md-nav__link">
-    <span class="md-ellipsis">
-      部署至gitpage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      添加评论
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -574,38 +591,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#latex" class="md-nav__link">
+  <a href="#rnn" class="md-nav__link">
     <span class="md-ellipsis">
-      latex 公式支持
+      RNN
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="RNN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      渲染代码
+      也可以有多层隐藏层
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#gitpage" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#rnn_1" class="md-nav__link">
     <span class="md-ellipsis">
-      部署至gitpage
+      两种RNN：
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#rnn_2" class="md-nav__link">
     <span class="md-ellipsis">
-      添加评论
+      双向的RNN
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lstm" class="md-nav__link">
+    <span class="md-ellipsis">
+      长 短期 记忆LSTM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -624,68 +656,34 @@
                   
 
 
-  <h1>一些在使用过程中逐步完善的插件内容</h1>
+  <h1>RNN</h1>
 
-<p>官方参考文档
-<a href="https://wdk-docs.github.io/mkdocs-material-docs/reference/">reference</a></p>
-<p><a href="https://wcowin.work/Mkdocs-Wcowin/blog/Mkdocs/mkdocs1/">很不错的中文教程</a></p>
-<h3 id="latex">latex  公式支持</h3>
-<p>这里使用的是Katex库,另一个amathjax使用发现不能成功渲染
-添加到mkdoc.yml
-<div class="highlight"><span class="filename">mkdocs.yml</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>markdown_extensions:
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  - pymdownx.arithmatex:
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>      generic: true
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>extra_javascript:
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  - javascripts/katex.js
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>extra_css:
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
-</code></pre></div>
-添加到/docs/javascripts/katex.js
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">katex.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(({</span><span class="w"> </span><span class="nx">body</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nx">renderMathInElement</span><span class="p">(</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nx">delimiters</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$$&quot;</span><span class="p">,</span><span class="w">  </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$$&quot;</span><span class="p">,</span><span class="w">  </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$&quot;</span><span class="p">,</span><span class="w">   </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$&quot;</span><span class="p">,</span><span class="w">   </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;\\(&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;\\)&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">left</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;\\[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;\\]&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">display</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">],</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="p">})</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">})</span>
-</code></pre></div></td></tr></table></div></p>
-<h3 id="_1">渲染代码</h3>
-<p>添加到mkdocs.yml中的markdown_extensions中
-<div class="highlight"><span class="filename">mkdocs.yml</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  - pymdownx.highlight:
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>      anchor_linenums: true
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  - pymdownx.inlinehilite
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  - pymdownx.snippets
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  - pymdownx.superfences
-</code></pre></div>
-外部代码引入使用 " --8&lt;-- "xxx.xx" "</p>
+<h2 id="rnn">RNN</h2>
+<p>我们希望NN有记忆力</p>
+<p><img alt="👍" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f44d.svg" title=":thumbsup:" /> RNN: 隐藏层的输出被记忆，下次被作为输入之一</p>
+<p><img alt="image-20241106161901071" src="../../assest/image-20241106161901071.png" /></p>
+<h4 id="_1">也可以有多层隐藏层</h4>
+<h4 id="rnn_1">两种RNN：</h4>
+<p>一种记忆隐藏层，一种记忆前一轮预测结果</p>
+<p>传说Jordan 更好</p>
+<p><img alt="image-20241106162228738" src="../../assest/image-20241106162228738.png" /></p>
+<h4 id="rnn_2">双向的RNN</h4>
+<p>好处：产生output时看的范围更广</p>
+<p><img alt="image-20241106162654745" src="../../assest/image-20241106162654745.png" /></p>
+<h4 id="lstm">长  短期  记忆LSTM</h4>
+<p><img alt="image-20241106163727207" src="../../assest/image-20241106163727207.png" /></p>
+<p>4个inputs：3个门信号，一个数据input</p>
+<p>1个output</p>
+<p><img alt="image-20241106164528649" src="../../assest/image-20241106164528649.png" /></p>
+<p>参数会翻四倍</p>
+<p><img alt="image-20241106220002868" src="../../assest/image-20241106220002868.png" /></p>
+<p>RNN不好训练</p>
+<p>LSTM：可以解决梯度vanishing</p>
 <ul>
-<li>
-<p>添加行号使用  linenums="x"  表示从x开始</p>
-</li>
-<li>
-<p>添加代码标题使用 title="xxx"</p>
-</li>
+<li>reason：</li>
+<li>memory and input are added</li>
+<li>除非forget，否则记忆的影响不会消失                 </li>
 </ul>
-<h3 id="gitpage">部署至gitpage</h3>
-<p><a href="https://derrors.github.io/%E5%B0%86%E7%BD%91%E9%A1%B5%E9%83%A8%E7%BD%B2%E5%88%B0%20GitHub%20Pages/">部署博客教程</a></p>
-<h3 id="_2">添加评论</h3>
-<p>这里参考了博文<a href="https://wcowin.work/blog/websitebeauty/mkcomments.html">add commments</a>，使用了<a href="https://giscus.app/zh-CN">giscus</a></p>
 
 
 
@@ -693,60 +691,10 @@
 
 
 
-  
-  
 
 
 
 
-
-
-  <h2 id="__comments">Comments</h2>
-  <!-- Insert generated snippet here -->
-  <script src="https://giscus.app/client.js"
-  data-repo="jiachengdai/JCdocs.github.io"
-  data-repo-id="R_kgDOM7aO0g"
-  data-category="Announcements"
-  data-category-id="DIC_kwDOM7aO0s4CjD3F"
-  data-mapping="pathname"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="bottom"
-  data-theme="preferred_color_scheme"
-  data-lang="zh-CN"
-  crossorigin="anonymous"
-  async>
-</script>
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    /* Set palette on initial load */
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    /* Register event handlers after documented loaded */
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate" ? "dark" : "light"
-
-          /* Instruct Giscus to change theme */
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
 
                 
               </article>
