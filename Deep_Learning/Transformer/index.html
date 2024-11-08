@@ -783,9 +783,9 @@
 <p>输出长度由模型决定</p>
 <p>Encoder-Decoder结构</p>
 <h4 id="encoder">Encoder</h4>
-<p><img alt="image-20241108143719124" src="C:\Users\代佳诚\AppData\Roaming\Typora\typora-user-images\image-20241108143719124.png" /></p>
+<p><img alt="image-20241108143719124" src="../../assest/image-20241108143719124.png" /></p>
 <p>原始的Transformer结构：</p>
-<p><img alt="image-20241108144523772" src="C:\Users\代佳诚\AppData\Roaming\Typora\typora-user-images\image-20241108144523772.png" /></p>
+<p><img alt="image-20241108144523772" src="../../assest/image-20241108144523772.png" /></p>
 <p>改进：https://arxiv.org/abs/2002.04745</p>
 <p>为什么layer norm：https://arxiv.org/abs/2003.07845</p>
 <h4 id="decoder">Decoder</h4>
@@ -807,11 +807,11 @@
 <li>方便并行</li>
 <li>效果会更差</li>
 </ul>
-<p><img alt="image-20241108153544698" src="C:\Users\代佳诚\AppData\Roaming\Typora\typora-user-images\image-20241108153544698.png" /></p>
+<p><img alt="image-20241108153544698" src="../../assest/image-20241108153544698.png" /></p>
 <h4 id="cross-attention">Cross Attention</h4>
 <p>encoder 与decoder交互</p>
 <p>q来自decoder，k、v来自encoder</p>
-<p><img alt="image-20241108154332164" src="C:\Users\代佳诚\AppData\Roaming\Typora\typora-user-images\image-20241108154332164.png" /></p>
+<p><img alt="image-20241108154332164" src="../../assest/image-20241108154332164.png" /></p>
 <h4 id="training">Training</h4>
 <ul>
 <li>看作一个分类问题，使用交叉熵损失函数</li>
@@ -855,7 +855,7 @@
 <h5 id="exposure-bias">exposure bias</h5>
 <p>在训练时decoder输入都是正确的ground truth但测试时有可能得到错误输入</p>
 <p><strong>Scheduled Sampling</strong>：我们在喂入decoder的时候，故意弄错一点东西（引入噪声）</p>
-<p><img alt="image-20241108162042641" src="C:\Users\代佳诚\AppData\Roaming\Typora\typora-user-images\image-20241108162042641.png" /></p>
+<p><img alt="image-20241108162042641" src="../../assest/image-20241108162042641.png" /></p>
 
 
 
